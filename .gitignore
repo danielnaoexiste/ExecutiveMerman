@@ -3,6 +3,7 @@
 token.json
 botconfig.json
 start.bat
+.vs 
 
 # Deprecated Commands
 commands/Unused
