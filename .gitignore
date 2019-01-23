@@ -4,9 +4,6 @@ token.json
 botconfig.json
 start.bat
 
-# Visual Studio 2015/2017 cache/options directory
-.vs/
-
 # Deprecated Commands
 commands/Unused
 
