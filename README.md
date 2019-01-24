@@ -13,6 +13,6 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 - `+mute @user (time+s)` - Temporarily mutes mentioned user.
 - `+kick @user (reason)` - Kicks mentioned user.
 - `+ban @user (reason)` - Bans mentioned user.
-- `+ban (question)` - Creates a poll.
+- `+poll (question)` - Creates a poll.
 
 ## [License](LICENSE)
