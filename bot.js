@@ -47,6 +47,7 @@ bot.on('message', async message =>  {
     let args = messageArray.slice(1); // Slice the command from the message
 
     // Get the Command Files
+    if(!message.content.startsWith(botconfig.prefix)) return; 
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
 
     // Run the Commands
