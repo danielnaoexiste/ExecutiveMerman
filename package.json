@@ -1,15 +1,16 @@
 {
-    "name": "test-bot",
+    "name": "executive-merman",
     "version": "1.0.0",
-    "description": "My first bot",
+    "description": "Administration bot",
     "main": "bot.js",
     "author": "Vulpon",
     "dependencies": {
-        "discord.io": "^2.5.3",
         "discord.js": "^11.4.2",
+        "ffmpeg-binaries": "^4.0.0",
         "ms": "^2.1.1",
+        "opusscript": "0.0.6",
         "random-puppy": "^1.1.0",
-        "superagent": "^4.0.0",
-        "winston": "^3.1.0"
+        "superagent": "^4.1.0",
+        "ytdl-core": "^0.29.1"
     }
 }
