@@ -4,8 +4,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/vulpon/executivemerman/badge)](https://www.codefactor.io/repository/github/vulpon/executivemerman)
 ## About
 Executive Merman is a useful and powerfull discord bot that helps you manage your server!
-<br>
-*Disclaimer: Executive Merman is in early stages of development.*
+
 <br>
 
 ## Commands
