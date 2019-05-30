@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+    // Server Info Log
     let sicon = message.guild.iconURL;
     let serverEmbed = new Discord.RichEmbed()
     .setDescription("Server Information")
@@ -12,10 +13,12 @@ module.exports.run = async (bot, message, args) => {
     .addField("Total Members", message.guild.memberCount);
     console.log("Server Info Sent!");
 
+    // Sends the Log
     message.channel.send(serverEmbed);
     return message.react("👍");
 }
 
 module.exports.help = {
-    name: "serverinfo"
+    name: "serverinfo",
+    description: "Shows server info"
 }

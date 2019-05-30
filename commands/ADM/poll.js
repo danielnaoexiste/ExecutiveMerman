@@ -29,5 +29,6 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.help = {
-    name: "poll"
+    name: "poll",
+    description: "Generates a Yes or No question"
 }

@@ -1,33 +1,42 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if (!kUser) return message.channel.send("Couldn't find user.");
+    // Fetches the Banned User
+    let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    
+    // Returns if user is not found
+    if (!bUser) return message.channel.send("Couldn't find user.");
+    
     let breason = args.join(" ").slice(22);
 
+    // Check for Permissions
     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("You can't ban people!");
-    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("This person can't be banned!");
+    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("This person can't be banned!");
 
-
+    // Ban Log
     let banEmbed = new Discord.RichEmbed()
     .setDescription("~Ban~")
     .setColor("#bc0000")
-    .addField("Banned User", `${kUser} with ID: ${kUser.id}`)
+    .addField("Banned User", `${bUser} with ID: ${bUser.id}`)
     .addField("Banned by", `${message.author} with ID: ${message.author.id}`)
     .addField("Banned in", message.channel)
     .addField("Time", message.createdAt)
     .addField("Reason", breason);
 
+    // Find the "incidentes" Channel || Needs to be manually added
     let banChannel = message.guild.channels.find(`name`, "incidentes");
     if(!banChannel) return message.channel.send("Couldn't find channel");
 
-    message.guild.member(kUser).ban(breason);
+    // Bans the User
+    message.guild.member(bUser).ban(breason);
 
+    // Sends the Log
     message.delete().catch(O_o=>{}); 
     banChannel.send(banEmbed);
     return;
 }
 
 module.exports.help = {
-    name: "ban"
+    name: "ban",
+    description: "Bans a User from the server"
 }

@@ -2,13 +2,18 @@ const Discord = require("discord.js");
 const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
+    // Fetches the Muted User
+    let mutedUser = message.mentions.members.first() || message.guild.members.get(args[0]);
     
-    let Muted = message.mentions.members.first() || message.guild.members.get(args[0]);
-    if(!Muted) return message.reply("Couldn't find user.");
+    // Returns if user is not found
+    if(!mutedUser) return message.reply("Couldn't find user.");
+    
+    // Check for Permissions
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't mute people");
-    if(Muted.hasPermission("MANAGE_MESSAGES")) return message.reply("This person can't be muted!");
+    if(mutedUser.hasPermission("MANAGE_MESSAGES")) return message.reply("This person can't be muted!");
 
-    let muteRole = message.guild.roles.find(`name`, `Muted`);
+    // Fetches the Muted Role
+    let muteRole = message.guild.roles.find(`name`, `mutedUser`);
 
     // If the Muted role does not exist, create it
     if(!muteRole) {
@@ -30,27 +35,33 @@ module.exports.run = async (bot, message, args) => {
         }
     }
 
+    // Fetches the Mute Time
     let mutetime = args[1];
     if(!mutetime) return message.reply("Please specify a time!");
 
-    await(Muted.addRole(muteRole.id));
+    // Adds the Role to the Muted User
+    await(mutedUser.addRole(muteRole.id));
     
+    // Mute Log
     let muteEmbed = new Discord.RichEmbed()
     .setDescription("~Temp Mute~")
     .setColor("#e56b00")
-    .addField("Muted User", `${Muted} with ID: ${Muted.id}`)
+    .addField("Muted User", `${mutedUser} with ID: ${mutedUser.id}`)
     .addField("Muted by", `${message.author} with ID: ${message.author.id}`)
     .addField("Muted in", message.channel)
     .addField("Muted for", mutetime);
 
+    // Find the "incidentes" Channel || Needs to be manually added
     let muteChannel = message.guild.channels.find(`name`, "incidentes");
     if(!muteChannel) return message.channel.send("Couldn't find channel");
 
+    // Sends the Log
     muteChannel.send(muteEmbed);
 
+    // Removes the Muted Role after the Timeout
     setTimeout(function(){
-        Muted.removeRole(muteRole.id);
-        message.channel.send(`<@${Muted.id}> has been unmuted`);
+        mutedUser.removeRole(muteRole.id);
+        message.channel.send(`<@${mutedUser.id}> has been unmuted`);
     }, ms(mutetime));
 
     return;
@@ -59,5 +70,6 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.help = {
-    name: "mute"
+    name: "mute",
+    description: "Mutes an user"
 }

@@ -1,7 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+    // Fetches the Reported User
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    
+    // Returns if user is not found
     if (!rUser) return message.channel.send("Couldn't find user.");
     
     let rreason = args.join(" ").slice(22);
@@ -16,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Time", message.createdAt)
     .addField("Reason", rreason);
 
-    // Find the Reports Channel
+    // Find the Reports Channel || Needs to be manually added
     let reportschannel = message.guild.channels.find(`name`, "reports");
     if(!reportschannel) return message.channel.send("Couldn't find channel");
 
@@ -29,5 +32,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "report"
+    name: "report",
+    description: "Anonimously reports an user to the mods"
 }
