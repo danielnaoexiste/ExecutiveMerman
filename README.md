@@ -10,7 +10,7 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 ## Commands
 
 ### ADM
-| Function | Description 
+ Function | Description 
  -------- | ----------- 
  `ban` | Bans a User from the server 
  `botinfo` | Shows info about the Executive Merman 
