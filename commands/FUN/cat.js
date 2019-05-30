@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
         let catEmbed = new Discord.RichEmbed()
         .setDescription("Cat")
         .setColor("#4676ba") 
-        .setImage(body.url);
+        .setImage(body[0].url);
 
 
         message.channel.send(catEmbed);

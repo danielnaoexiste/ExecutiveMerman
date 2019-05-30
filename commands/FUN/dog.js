@@ -20,13 +20,12 @@ module.exports.run = async (bot, message, args) => {
         
         if(!{body}) return message.channel.send("Broken Image, try again!");
         
-        let catEmbed = new Discord.RichEmbed()
+        let dogEmbed = new Discord.RichEmbed()
         .setDescription("Dog")
         .setColor("#4676ba") 
-        .setImage(body.url);
-
-
-        message.channel.send(catEmbed);
+        .setImage(body[0].url);
+        
+        message.channel.send(dogEmbed);
         x++;
         msg.delete();
     }
