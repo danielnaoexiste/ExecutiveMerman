@@ -22,6 +22,7 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 | `poll` | Generates a Yes or No question |
 | `report` | Anonimously reports an user to the mods |
 | `serverinfo` | Shows server info |
+{:.mbtablestyle}
 
 <br/>
 
@@ -31,6 +32,7 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 | `say` | Merman will say anything you'd like! |
 | `cat` | Merman will send you up to 20 Cats! |
 | `dog`  | Merman will send you up to 20 Doggos! |
+{:.mbtablestyle}
 
 
 ## [License](LICENSE)
