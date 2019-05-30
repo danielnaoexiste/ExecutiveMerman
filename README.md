@@ -4,23 +4,24 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/vulpon/executivemerman/badge)](https://www.codefactor.io/repository/github/vulpon/executivemerman)
 ## About
 Executive Merman is a useful and powerfull discord bot that helps you manage your server!
-
+<br>
+*Disclaimer: Executive Merman is in early stages of development.*
 <br>
 
 ## Commands
 
 ### ADM
- Function | Description 
- -------- | ----------- 
- `ban` | Bans a User from the server 
- `botinfo` | Shows info about the Executive Merman 
- `clear` | Purges the especified amount off messages 
- `help` | Shows all available commands 
- `kick` | Kicks a User from the server 
- `mute`  | Mutes an user 
- `poll` | Generates a Yes or No question 
- `report` | Anonimously reports an user to the mods 
- `serverinfo` | Shows server info 
+| Function | Description |
+| -------- | ----------- |
+| `ban` | Bans a User from the server |
+| `botinfo` | Shows info about the Executive Merman |
+| `clear` | Purges the especified amount off messages |
+| `help` | Shows all available commands |
+| `kick` | Kicks a User from the server |
+| `mute`  | Mutes an user |
+| `poll` | Generates a Yes or No question |
+| `report` | Anonimously reports an user to the mods |
+| `serverinfo` | Shows server info |
 
 <br/>
 
@@ -33,3 +34,4 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 
 
 ## [License](LICENSE)
+
