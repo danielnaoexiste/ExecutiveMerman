@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Reason", breason);
 
     // Find the "incidentes" Channel || Needs to be manually added
-    let banChannel = message.guild.channels.find(`name`, "incidentes");
+    let banChannel = message.guild.channels.find(`name`, "penalties");
     if(!banChannel) return message.channel.send("Couldn't find channel");
 
     // Bans the User

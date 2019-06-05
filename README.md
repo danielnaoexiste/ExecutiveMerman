@@ -31,6 +31,9 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 | `say` | Merman will say anything you'd like! |
 | `cat` | Merman will send you up to 20 Cats! |
 | `dog`  | Merman will send you up to 20 Doggos! |
+| `fox`  | Merman will send you up to 20 Foxes! |
+| `firefox`  | Merman will send you up to 20 Red Pandas! |
+| `talk`  | Merman will talk to you! |
 
 
 ## [License](LICENSE)

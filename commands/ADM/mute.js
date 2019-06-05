@@ -9,11 +9,11 @@ module.exports.run = async (bot, message, args) => {
     if(!mutedUser) return message.reply("Couldn't find user.");
     
     // Check for Permissions
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't mute people");
-    if(mutedUser.hasPermission("MANAGE_MESSAGES")) return message.reply("This person can't be muted!");
+    // if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't mute people");
+    // if(mutedUser.hasPermission("MANAGE_MESSAGES")) return message.reply("This person can't be muted!");
 
     // Fetches the Muted Role
-    let muteRole = message.guild.roles.find(`name`, `mutedUser`);
+    let muteRole = message.guild.roles.find(`name`, `Muted`);
 
     // If the Muted role does not exist, create it
     if(!muteRole) {
@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     // Fetches the Mute Time
-    let mutetime = args[1];
+    let mutetime = args[2];
     if(!mutetime) return message.reply("Please specify a time!");
 
     // Adds the Role to the Muted User
@@ -51,10 +51,12 @@ module.exports.run = async (bot, message, args) => {
     .addField("Muted in", message.channel)
     .addField("Muted for", mutetime);
 
-    // Find the "incidentes" Channel || Needs to be manually added
-    let muteChannel = message.guild.channels.find(`name`, "incidentes");
+    // Find the "penalties" Channel || Needs to be manually added
+    let muteChannel = message.guild.channels.find(x => x.name === "penalties");
+    
     if(!muteChannel) return message.channel.send("Couldn't find channel");
-
+    
+    
     // Sends the Log
     muteChannel.send(muteEmbed);
 

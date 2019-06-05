@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     // Returns if user is not found
     if (!rUser) return message.channel.send("Couldn't find user.");
     
-    let rreason = args.join(" ").slice(22);
+    let rreason = args.join(" ").slice(30);
 
     // Report Log
     let reportEmbed = new Discord.RichEmbed()
@@ -27,7 +27,12 @@ module.exports.run = async (bot, message, args) => {
     message.delete().catch(O_o=>{}); 
 
     // Sends the Log
-    reportschannel.send(reportEmbed);
+    let msg = await reportschannel.send(reportEmbed);
+
+    // Reacts
+    await msg.react('✅');
+    await msg.react('❎');
+    
     return;
 }
 

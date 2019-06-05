@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Reason", kreason);
 
     // Find the "incidentes" Channel || Needs to be manually added
-    let kickChannel = message.guild.channels.find(`name`, "incidentes");
+    let kickChannel = message.guild.channels.find(`name`, "penalties");
     if(!kickChannel) return message.channel.send("Couldn't find channel");
 
     // Kicks the User
