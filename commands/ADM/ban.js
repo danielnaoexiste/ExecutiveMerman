@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     // Fetches the Banned User
@@ -7,14 +7,14 @@ module.exports.run = async (bot, message, args) => {
     // Returns if user is not found
     if (!bUser) return message.channel.send("Couldn't find user.");
     
-    let breason = args.join(" ").slice(22);
+    let breason = args.splice(2).join(" ");
 
     // Check for Permissions
     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("You can't ban people!");
     if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("This person can't be banned!");
 
     // Ban Log
-    let banEmbed = new Discord.RichEmbed()
+    let banEmbed = new RichEmbed()
     .setDescription("~Ban~")
     .setColor("#bc0000")
     .addField("Banned User", `${bUser} with ID: ${bUser.id}`)

@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 const botconfig = require('../.././botconfig.json');
 
 module.exports.run = async (bot, message, args) => {
@@ -6,12 +6,13 @@ module.exports.run = async (bot, message, args) => {
     let bicon = bot.user.displayAvatarURL;
 
     // Message Embed
-    let botEmbed = new Discord.RichEmbed()    
+    let botEmbed = new RichEmbed()    
     .setDescription("Bot Information")
     .setColor("#4676ba")
     .setThumbnail(bicon)
     .addField("Bot Name", bot.user.username)
     .addField("Created On", bot.user.createdAt)
+    .addField("Currently On", `${bot.guilds.size} Servers with ${bot.users.size} users!`)
     .addField("Prefix", botconfig.prefix);
     
     // Sends the Log

@@ -1,12 +1,9 @@
-const Discord = require("discord.js")
-
-
 module.exports = bot => {
     console.log(`${bot.user.username} is online`)
 
     let games = [
         `on ${bot.guilds.size} servers!`,
-        "+help",
+        "ex!help",
         `with over ${bot.users.size} users!`,
         `alone :c`,
         `GameDEV`,

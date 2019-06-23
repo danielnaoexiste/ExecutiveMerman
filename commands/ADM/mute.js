@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
@@ -43,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
     await(mutedUser.addRole(muteRole.id));
     
     // Mute Log
-    let muteEmbed = new Discord.RichEmbed()
+    let muteEmbed = new RichEmbed()
     .setDescription("~Temp Mute~")
     .setColor("#e56b00")
     .addField("Muted User", `${mutedUser} with ID: ${mutedUser.id}`)

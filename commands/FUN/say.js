@@ -1,5 +1,3 @@
-const Discord = require("discord.js");
-
 module.exports.run = async (bot, message, args) => {
     let botMessage = args.join(" ");
     message.delete().catch(); // Deletes the Message

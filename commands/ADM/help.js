@@ -1,5 +1,3 @@
-const Discord = require("discord.js");
-const botconfig = require('../.././botconfig.json');
 const glob = require("glob");
 const path = require("path");
 
@@ -29,8 +27,6 @@ module.exports.run = async (bot, message, args) => {
         )
             
     });
-        
-    console.log({embed});
     
     // Sends the Log
     message.channel.send({embed});

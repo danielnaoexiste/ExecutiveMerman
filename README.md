@@ -36,6 +36,18 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 | `firefox`  | Merman will send you up to 20 Red Pandas! |
 | `talk`  | Merman will talk to you! |
 
+<br/>
+
+### MUSIC
+| Function | Description |
+| -------- | ----------- |
+| `play` | Merman will add a music to the queue! |
+| `queue`  | Shows the server music queue! |
+| `skip`  | Searches for a music on youtube! |
+| `search`  | Searches for a music on youtube! |
+| `pause` | Pauses the current song! |
+| `resume`  | Resumes the current song! |
+| `leave`  | Executive merman will leave the voice channel! |
 
 ## [License](LICENSE)
 

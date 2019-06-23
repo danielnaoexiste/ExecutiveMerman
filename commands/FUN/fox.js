@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 
         if(!{body}) return message.channel.send("Broken Image, try again!");
         
-        let foxEmbed = new Discord.RichEmbed()
+        let foxEmbed = new RichEmbed()
         .setDescription("Fox")
         .setColor("#4676ba") 
         .setImage(body.image);

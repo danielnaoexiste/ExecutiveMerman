@@ -1,6 +1,3 @@
-const Discord = require("discord.js")
-const prefix = require("../botconfig.json")
-
 module.exports = async (bot, guild) => {
     
     console.log(`Joined: ${guild.name}`);

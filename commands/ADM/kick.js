@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     // Fetches the Kicked User
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     if(kUser.hasPermission("MANAGE_MESSAGES")) return message.reply("This person can't be kicked!");
 
     // Ban Log
-    let kickEmbed = new Discord.RichEmbed()
+    let kickEmbed = new RichEmbed()
     .setDescription("~Kick~")
     .setColor("#e56b00")
     .addField("Kicked User", `${kUser} with ID: ${kUser.id}`)

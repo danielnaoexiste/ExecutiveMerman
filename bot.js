@@ -1,13 +1,15 @@
 // Require Modules
-const Discord = require('discord.js');
+const {Client, Collection} = require('discord.js');
 const tokenfile = require('./token.json')
 const botconfig = require('./botconfig.json');
 const glob = require("glob");
 const path = require("path");
 
 // Declare Bot
-const bot = new Discord.Client({disableEveryone: true});
-bot.commands = new Discord.Collection();
+const bot = new Client();
+bot.commands = new Collection();
+
+const activeQueue = new Map();
 
 
 // Filesystem + Reading Commands
@@ -36,7 +38,7 @@ bot.on('message', async message =>  {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     
     // Run the Commands
-    if (commandfile) commandfile.run(bot, message, args);
+    if (commandfile) commandfile.run(bot, message, args, activeQueue);
 
 });
 

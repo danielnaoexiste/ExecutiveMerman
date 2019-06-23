@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     // Fetches the Reported User
@@ -7,10 +7,10 @@ module.exports.run = async (bot, message, args) => {
     // Returns if user is not found
     if (!rUser) return message.channel.send("Couldn't find user.");
     
-    let rreason = args.join(" ").slice(30);
+    let rreason = args.splice(2).join(" ");
 
     // Report Log
-    let reportEmbed = new Discord.RichEmbed()
+    let reportEmbed = new RichEmbed()
     .setDescription("Reports")
     .setColor("#4676ba")
     .addField("Reported User", `${rUser} with ID: ${rUser.id}`)

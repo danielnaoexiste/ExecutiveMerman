@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
         
         if(!{body}) return message.channel.send("Broken Image, try again!");
         
-        let dogEmbed = new Discord.RichEmbed()
+        let dogEmbed = new RichEmbed()
         .setDescription("Dog")
         .setColor("#4676ba") 
         .setImage(body[0].url);

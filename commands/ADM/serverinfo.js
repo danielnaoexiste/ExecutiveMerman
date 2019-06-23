@@ -1,9 +1,9 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     // Server Info Log
     let sicon = message.guild.iconURL;
-    let serverEmbed = new Discord.RichEmbed()
+    let serverEmbed = new RichEmbed()
     .setDescription("Server Information")
     .setColor("#4676ba")
     .setThumbnail(sicon)
