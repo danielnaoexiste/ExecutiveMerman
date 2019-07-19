@@ -1,11 +1,37 @@
 # Executive Merman
-![GitHub release](https://img.shields.io/github/release/Vulpon/ExecutiveMerman.svg)
-[![GitHub license](https://img.shields.io/github/license/Vulpon/ExecutiveMerman.svg)](https://github.com/Vulpon/ExecutiveMerman/blob/master/LICENSE)
-[![CodeFactor](https://www.codefactor.io/repository/github/vulpon/executivemerman/badge)](https://www.codefactor.io/repository/github/vulpon/executivemerman)
+![GitHub release](https://img.shields.io/github/release/danielnaoexiste/ExecutiveMerman.svg)
+[![GitHub license](https://img.shields.io/github/license/danielnaoexiste/ExecutiveMerman.svg)](https://github.com/Vulpon/ExecutiveMerman/blob/master/LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman/badge)](https://www.codefactor.io/repository/github/vulpon/executivemerman)
 [![Discord Bots](https://discordbots.org/api/widget/status/507770169075040256.svg)](https://discordbots.org/bot/507770169075040256)
 ## About
 Executive Merman is a useful and powerfull discord bot that helps you manage your server!
 <br>
+
+## Installation
+Download / Clone or fork the repository, then run the command below to install all the dependencies.
+
+```
+npm install
+```
+Then create a file on the root folder named `botconfig.json` and add the code below, with your preferred prefix:
+
+```json
+{
+    "prefix": "YOUR PREFIX HERE"
+}
+```
+
+After that, create a file on the root folder named `token.json` and add the code below, with your discord application token:
+```json
+{
+    "token": "YOUR DISCORD APPLICATION TOKEN HERE"
+}
+```
+
+Run the bot with:
+```
+node bot.js
+```
 
 ## Commands
 
