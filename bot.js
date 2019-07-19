@@ -9,8 +9,6 @@ const path = require("path");
 const bot = new Client();
 bot.commands = new Collection();
 
-const activeQueue = new Map();
-
 
 // Filesystem + Reading Commands
 
@@ -38,7 +36,7 @@ bot.on('message', async message =>  {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     
     // Run the Commands
-    if (commandfile) commandfile.run(bot, message, args, activeQueue);
+    if (commandfile) commandfile.run(bot, message, args);
 
 });
 

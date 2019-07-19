@@ -6,14 +6,10 @@
     "author": "Vulpon",
     "dependencies": {
         "discord.js": "^11.4.2",
-        "ffmpeg-binaries": "^4.0.0",
+        "lzma-native": "4.0.5",
         "glob": "^7.1.4",
         "ms": "^2.1.1",
-        "node-opus": "^0.3.2",
         "random-puppy": "^1.1.0",
-        "superagent": "^4.1.0",
-        "yt-search": "^0.4.1",
-        "ytdl-core": "^0.29.1",
-        "ytdl-core-discord": "^1.0.3"
+        "superagent": "^4.1.0"
     }
 }
