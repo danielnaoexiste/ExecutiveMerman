@@ -1,7 +1,7 @@
 # Executive Merman
-![GitHub release](https://img.shields.io/github/release/Vulpon/ExecutiveMerman.svg)
-[![GitHub license](https://img.shields.io/github/license/Vulpon/ExecutiveMerman.svg)](https://github.com/Vulpon/ExecutiveMerman/blob/master/LICENSE)
-[![CodeFactor](https://www.codefactor.io/repository/github/vulpon/executivemerman/badge)](https://www.codefactor.io/repository/github/vulpon/executivemerman)
+![GitHub release](https://img.shields.io/github/release/danielnaoexiste/ExecutiveMerman.svg)
+[![GitHub license](https://img.shields.io/github/license/danielnaoexiste/ExecutiveMerman.svg)](https://github.com/danielnaoexiste/ExecutiveMerman/blob/master/LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman/badge)](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman)
 [![Discord Bots](https://discordbots.org/api/widget/status/507770169075040256.svg)](https://discordbots.org/bot/507770169075040256)
 ## About
 Executive Merman is a useful and powerfull discord bot that helps you manage your server!
@@ -49,6 +49,11 @@ Executive Merman is a useful and powerfull discord bot that helps you manage you
 | `pause` | Pauses the current song! |
 | `resume`  | Resumes the current song! |
 | `leave`  | Executive merman will leave the voice channel! |
+
+<br/>
+
+## Discord Bots
+[![Discord Bots](https://discordbots.org/api/widget/507770169075040256.svg)](https://discordbots.org/bot/507770169075040256)
 
 ## [License](LICENSE)
 
