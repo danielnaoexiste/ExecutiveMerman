@@ -4,7 +4,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman/badge)](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman)
 [![Discord Bots](https://discordbots.org/api/widget/status/507770169075040256.svg)](https://discordbots.org/bot/507770169075040256)
 ## About
-Executive Merman is a useful and powerfull discord bot that helps you manage your server!
+Executive Merman is a powerfull discord bot that helps you manage your server!
 <br>
 
 ## Installation
@@ -44,7 +44,7 @@ node bot.js
 | `help` | Shows all available commands |
 | `kick` | Kicks a User from the server |
 | `mute`  | Mutes an user |
-| `poll` | Generates a Yes or No question |
+| `poll` | Generates a poll! Usage: e!poll [time] [question] |
 | `report` | Anonimously reports an user to the mods |
 | `serverinfo` | Shows server info |
 

@@ -9,8 +9,8 @@ module.exports.run = async (bot, message, args) => {
     if(!mutedUser) return message.reply("Couldn't find user.");
     
     // Check for Permissions
-    // if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't mute people");
-    // if(mutedUser.hasPermission("MANAGE_MESSAGES")) return message.reply("This person can't be muted!");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't mute people");
+    if(mutedUser.hasPermission("MANAGE_MESSAGES")) return message.reply("This person can't be muted!");
 
     // Fetches the Muted Role
     let muteRole = message.guild.roles.find(`name`, `Muted`);
