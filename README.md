@@ -44,7 +44,7 @@ node bot.js
 | `help` | Shows all available commands |
 | `kick` | Kicks a User from the server |
 | `mute`  | Mutes an user |
-| `poll` | Generates a poll! Usage: e!poll [time] [question] |
+| `poll` | Generates a poll! Usage: (prefix)poll [time] [question] |
 | `report` | Anonimously reports an user to the mods |
 | `serverinfo` | Shows server info |
 
