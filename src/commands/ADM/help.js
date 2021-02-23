@@ -12,11 +12,12 @@ module.exports.run = async (bot, message, args) => {
             url: bicon
         },
         description: `Available commands`,
+        footer: { text: "Feito com <3 para a Dev-U" },
         fields: [] 
     }
     
     // Runs through the commands and adds their name an description to the embed
-    glob.sync("./commands/**/*.js").forEach(function(file){
+    glob.sync("./src/commands/**/*.js").forEach(function(file){
         let i = 0;
         let props = require(path.resolve(file))
         embed.fields.push(

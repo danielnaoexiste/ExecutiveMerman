@@ -1,19 +1,22 @@
-const {RichEmbed} = require("discord.js");
-const botconfig = require('../.././botconfig.json');
+const { MessageEmbed } = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     // Bot Info Log
-    let bicon = bot.user.displayAvatarURL;
-
+    let bicon = bot.user.displayAvatarURL();
+    console.log(bicon)
     // Message Embed
-    let botEmbed = new RichEmbed()    
+    let botEmbed = new MessageEmbed()    
     .setDescription("Bot Information")
     .setColor("#4676ba")
     .setThumbnail(bicon)
     .addField("Bot Name", bot.user.username)
     .addField("Created On", bot.user.createdAt)
-    .addField("Currently On", `${bot.guilds.size} Servers with ${bot.users.size} users!`)
-    .addField("Prefix", botconfig.prefix);
+    .addField("Currently On", `${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`)
+    .addField("Prefix", process.env.PREFIX)
+    .addField("Created by", "[Daniel Gazzaneo](https://github.com/danielnaoexiste)")
+    .addField("Github Repo", "[Github](https://github.com/danielnaoexiste/ExecutiveMerman)")
+    .setFooter("A gift for Dev-U")
+
     
     // Sends the Log
     message.channel.send(botEmbed);

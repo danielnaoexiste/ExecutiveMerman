@@ -1,11 +1,9 @@
 #config files
-
-token.json
+.env
 botconfig.json
-start.bat
 
 # Deprecated Commands
-commands/Unused
+commands/deprecated
 
 # node modules
 node_modules

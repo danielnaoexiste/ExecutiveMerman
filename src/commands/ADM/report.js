@@ -1,8 +1,8 @@
-const {RichEmbed} = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     // Fetches the Reported User
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
     
     // Returns if user is not found
     if (!rUser) return message.channel.send("Couldn't find user.");
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     let rreason = args.splice(2).join(" ");
 
     // Report Log
-    let reportEmbed = new RichEmbed()
+    let reportEmbed = new MessageEmbed()
     .setDescription("Reports")
     .setColor("#4676ba")
     .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Reason", rreason);
 
     // Find the Reports Channel || Needs to be manually added
-    let reportschannel = message.guild.channels.find(`name`, "reports");
+    let reportschannel = message.guild.channels.cache.find(x => x.name === "reports");
     if(!reportschannel) return message.channel.send("Couldn't find channel");
 
     // Deletes the Report Message

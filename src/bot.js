@@ -1,9 +1,8 @@
 // Require Modules
-const {Client, Collection} = require('discord.js');
-const tokenfile = require('./token.json')
-const botconfig = require('./botconfig.json');
+const { Client, Collection } = require('discord.js');
 const glob = require("glob");
 const path = require("path");
+require("dotenv").config();
 
 // Declare Bot
 const bot = new Client();
@@ -12,7 +11,7 @@ bot.commands = new Collection();
 
 // Filesystem + Reading Commands
 
-glob.sync("./commands/**/*.js").forEach(function(file){
+glob.sync("./src/commands/**/*.js").forEach(function(file){
     let props = require(path.resolve(file))
     console.log(`${props.help.name} loaded!`);
     bot.commands.set(props.help.name, props)
@@ -26,13 +25,13 @@ bot.on('message', async message =>  {
     if(message.channel.type === "dm") return;
     
     // Declare Locals
-    let prefix = botconfig.prefix;
+    let prefix = process.env.PREFIX;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
-    let args = messageArray.slice(0); // Slice the command from the message
+    let args = messageArray.slice(0);
     
     // Get the Command Files
-    if(!message.content.startsWith(botconfig.prefix)) return; 
+    if(!message.content.startsWith(prefix)) return; 
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     
     // Run the Commands
@@ -40,4 +39,4 @@ bot.on('message', async message =>  {
 
 });
 
-bot.login(tokenfile.token);
+bot.login(process.env.BOT_TOKEN);

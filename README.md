@@ -2,7 +2,8 @@
 ![GitHub release](https://img.shields.io/github/release/danielnaoexiste/ExecutiveMerman.svg)
 [![GitHub license](https://img.shields.io/github/license/danielnaoexiste/ExecutiveMerman.svg)](https://github.com/danielnaoexiste/ExecutiveMerman/blob/master/LICENSE)
 [![CodeFactor](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman/badge)](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman)
-[![Discord Bots](https://discordbots.org/api/widget/status/507770169075040256.svg)](https://discordbots.org/bot/507770169075040256)
+[![Discord Bots](https://top.gg/api/widget/lib/507770169075040256.svg)](https://top.gg/bot/507770169075040256)
+
 ## About
 Executive Merman is a powerfull discord bot that helps you manage your server!
 <br>
@@ -13,24 +14,15 @@ Download / Clone or fork the repository, then run the command below to install a
 ```
 npm install
 ```
-Then create a file on the root folder named `botconfig.json` and add the code below, with your preferred prefix:
-
-```json
-{
-    "prefix": "YOUR PREFIX HERE"
-}
-```
-
-After that, create a file on the root folder named `token.json` and add the code below, with your discord application token:
-```json
-{
-    "token": "YOUR DISCORD APPLICATION TOKEN HERE"
-}
-```
+Then rename the `.env_example` file on the root folder to `.env` and add your token and prefix:
 
 Run the bot with:
 ```
-node bot.js
+npm start 
+```
+or with nodemon for hot reloads:
+```
+npm run serve
 ```
 
 ## Commands
@@ -58,7 +50,6 @@ node bot.js
 | `dog`  | Merman will send you up to 20 Doggos! |
 | `fox`  | Merman will send you up to 20 Foxes! |
 | `firefox`  | Merman will send you up to 20 Red Pandas! |
-| `talk`  | Merman will talk to you! |
 
 
 ## [License](LICENSE)
