@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "Administration bot",
     "main": "bot.js",
-    "author": "Vulpon",
+    "author": "danielnaoexiste",
     "scripts": {
         "serve": "nodemon src/bot.js",
         "start": "node src/bot.js"
@@ -12,10 +12,12 @@
         "discord.js": "^12.5.1",
         "dotenv": "^8.2.0",
         "glob": "^7.1.4",
-        "lzma-native": "4.0.5",
         "ms": "^2.1.1",
         "nodemon": "^2.0.7",
         "random-puppy": "^1.1.0",
         "superagent": "^4.1.0"
-    }
+    }, 
+    "engines": {
+        "node": "12.18.x"
+      }
 }
