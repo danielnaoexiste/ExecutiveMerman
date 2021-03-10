@@ -11,16 +11,15 @@ module.exports.run = async (bot, message, args) => {
     
     let timeout = args[1];
     let question = args.splice(2).join(' ');
-    
+    if (!question.endsWith('?')) question = question + "?";
     if(ms(timeout) == undefined) return message.reply("Please specify a time!");
     
     // Creates the Embed
     let pollEmbed = new MessageEmbed()
         .setColor("#e56b00")
-        .setDescription(`Poll created by: ${message.author.username}`)
-        .setFooter(`React to Vote. Poll will run for ${timeout}`)
-        .setTitle(question);
-        // .addField(`Poll will run for ${timeout}`);
+        .setTitle("Poll")
+        .addField(`Question:`,  `**${question}**`, true)
+        .setFooter(`React to Vote. Poll was created by ${message.author.username} and will run for ${timeout}`)
 
     // Store sent message
     let msg = await message.channel.send(pollEmbed);
@@ -33,12 +32,12 @@ module.exports.run = async (bot, message, args) => {
     
     const filter = (reaction, user) => ['✅', '❎'].includes(reaction.emoji.name);
 
-    const results = await msg.awaitReactions(filter, { time: ms(timeout) });
+    await msg.awaitReactions(filter, { time: ms(timeout) });
 
     let resultEmbed = new MessageEmbed()
-        .setTitle(`Results: ${question}`)
+        .setTitle(`Results`)
+        .addField('Question:', `**${question}**`, true)
         .setColor("#e56b00")
-        .setDescription("Poll Results")
         .addField("✅ :", `${msg.reactions.cache.get("✅").count-1} vote(s)!`)
         .addField("❎ :", `${msg.reactions.cache.get("❎").count-1} vote(s)!`);
 

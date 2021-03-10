@@ -1,3 +1,3 @@
-module.exports = bot => {
+module.exports = () => {
     console.log('A reaction has been added');
 }
