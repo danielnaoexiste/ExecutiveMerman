@@ -2,7 +2,7 @@
 ![GitHub release](https://img.shields.io/github/release/danielnaoexiste/ExecutiveMerman.svg)
 [![GitHub license](https://img.shields.io/github/license/danielnaoexiste/ExecutiveMerman.svg)](https://github.com/danielnaoexiste/ExecutiveMerman/blob/master/LICENSE)
 [![CodeFactor](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman/badge)](https://www.codefactor.io/repository/github/danielnaoexiste/executivemerman)
-[![Discord Bots](https://top.gg/api/widget/lib/507770169075040256.svg)](https://top.gg/bot/507770169075040256)
+[![Discord Bots](https://img.shields.io/badge/-InviteBot!-7289da?style=flat&logo=discord&logoColor=white)](https://top.gg/bot/507770169075040256)
 
 ## About
 Executive Merman is a powerfull discord bot that helps you manage your server!
